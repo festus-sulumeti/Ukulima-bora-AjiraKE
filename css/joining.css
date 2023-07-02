@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+:root{
+    --mount-meadow: blue;
+    --white-smoke: #f0f0f0;
+    --night-rider: blue;
+    --black: #17171b;
+    --transition: all 0.5s ease-in-out;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+/* setup & reusable stylings */
+img{
+    width: 100%;
+}
+
+/* header */
+.header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/Amboseli.jpeg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.containerr{
+    width: 100%;
+    height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* Blinking effect for the arrow */
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .uil-arrow-down {
+    animation: blink 1s infinite;
+    font-size: 52px;
+  }
+  
+  /* Hover effect for the arrow */
+  .uil-arrow-down:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Active effect for the arrow when clicked */
+  .uil-arrow-down.active {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px 60px 70px;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: blue;
+    position: relative;
+}
+
+.form-box h1:after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 4 px;
+    background: blue;
+}
+
+.form-box h1:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 2px;
+    background: blue;
+}
+
+.input-field{
+    background: #f0f0f0;
+    border-radius: 25px;
+    padding: 15px 20px;
+    align-items: center;
+    margin: 10px 0;
+    max-height: 67px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background: none;
+    color: #333;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 10px;
+    padding: 8px 45px;
+}
+  
+.input-field i {
+    font-size: 20px;
+    color: blue;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form p {
+  text-align: left;
+  font-size: 18px;
+}
+
+form p a{
+  text-decoration: none;
+  color: blue;
+}
+  
+.btn-field{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-field button{
+   flex-basis: 50%;
+   background: white;
+   color: blue;
+   height: 42px;
+   border-radius: 25px;
+   border: 0;
+   outline: 0;
+   cursor: pointer;
+   /*transition: background 1s;*/
+}
